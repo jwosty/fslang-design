@@ -60,7 +60,8 @@ Given the above considerations, the following functions are proposed to be added
 ```fsharp
 contains : string -> string -> bool 
 replace : string -> string -> string -> string 
-split : string -> string -> string seq
+split : string -> string -> string []
+splitLines : string -> string -> string []
 startsWith : string -> string -> bool
 endsWith : string -> string -> bool 
 trim : string -> string 
