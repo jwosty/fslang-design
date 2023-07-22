@@ -33,8 +33,8 @@ FS-1081 adds the following to the list of allowed types for `expr`
 * byref<'t>
 * inref<'t>
 * outref<'t>
-* any 'a when 'a has a method `GetPinnableReference : unit -> byref<'t>`
-* any 'a when 'a has a method `GetPinnableReference : unit -> inref<'t>`
+* any 'a when 'a has a method or extension method `GetPinnableReference : unit -> byref<'t>`
+* any 'a when 'a has a method or extension method `GetPinnableReference : unit -> inref<'t>`
 
 The code generator will need to generate code that pins these references and takes their addresses. For reference, here is the C# proposal: https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/pattern-based-fixed.md.
 
